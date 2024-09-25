@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row mt-5">
+    <div class="col-sm-12">
+      <button class="btn btn-primary" (click)="ViewData()">View Data</button>
+    </div>
+    <div class="col-sm-12">
+      <h1 class="text-center">Hichart</h1>
+    </div>
+    <div class="col-sm-12">
+      <app-gender></app-gender>
+    </div>
+  </div>
+</div>
+
+<app-general-modal-popup id="myModal-1">
+  <div class="modal-header" [class]="headerColor" [innerHTML]="HeaderTitle"></div>
+  <div class="modal-body pt-0">
+    <!-- Pass genderData to app-gender -->
+    <app-gender [parentGenderWiseData]="GenderWiseData"></app-gender>
+  </div>
+
+  <div class="modal-footer">
+    <button type="button" (click)="closeModal('myModal-1');" class="btn btn-sm btn-outline-secondary">Close</button>
+  </div>
+  
+</app-general-modal-popup>
